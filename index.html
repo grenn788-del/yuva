@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yuva – Studio de design et décoration d’intérieur · France</title>
+  <meta name="description" content="Yuva conçoit des espaces de vie d’exception en France : design et décoration d’intérieur sur-mesure, à distance et sur site.">
+  <meta name="theme-color" content="#1e1033">
+  <meta property="og:title" content="Yuva – Réinventer l’espace. Façonner votre cocon.">
+  <meta property="og:description" content="Studio de design et décoration d’intérieur en France.">
+  <meta property="og:image" content="assets/img/haussmann.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/logo/favicon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Borel&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { yuva: { bg: '#F5F5F5', peri: '#7F59FF', violet: '#7F00FF', ink: '#241f2b', night: '#1e1033' } },
+      fontFamily: { script: ['Borel', 'cursive'], sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'] }
+    } } };
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#studio">Aller au contenu</a>
+  <div class="journey" aria-hidden="true">
+    <svg id="journey" width="80" height="600" viewBox="0 0 80 600">
+      <defs>
+        <linearGradient id="jg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7F59FF"/><stop offset="1" stop-color="#7F00FF"/></linearGradient>
+        <radialGradient id="jo"><stop offset="0" stop-color="#fff"/><stop offset=".35" stop-color="#b9a6ff"/><stop offset="1" stop-color="#7F59FF" stop-opacity="0"/></radialGradient>
+      </defs>
+      <path id="j-track" fill="none" stroke="rgba(127,89,255,.3)" stroke-width="2" stroke-linecap="round"/>
+      <path id="j-prog" fill="none" stroke="url(#jg)" stroke-width="5" stroke-linecap="round"/>
+      <g id="j-orb"><circle class="j-halo" r="20" fill="url(#jo)"/><circle r="7" fill="#fff" stroke="#7F00FF" stroke-width="3"/></g>
+    </svg>
+  </div>
+
+  <header class="hd" id="header">
+    <a class="logo" href="#hero" aria-label="Yuva – accueil">
+      <img class="logo-violet" src="assets/logo/yuva-violet.svg" alt="Yuva" width="120" height="51">
+      <img class="logo-clair" src="assets/logo/yuva-clair.svg" alt="" width="120" height="51">
+    </a>
+    <nav class="hd-nav hidden lg:flex" aria-label="Navigation principale">
+      <a href="#studio">Le Studio</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#approche">Approche</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a class="btn btn-violet magnetic hidden sm:inline-flex" href="#contact">Démarrer un projet</a>
+      <button class="burger lg:hidden" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="menu" id="menu" hidden>
+    <nav aria-label="Menu mobile">
+      <a href="#studio">Le Studio</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#approche">Approche</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-violet" href="#contact">Démarrer un projet</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- HERO + NOTRE VISION : une seule scène, l'image avance vers nous au scroll -->
+    <section class="sec hero" id="hero" data-theme="dark">
+      <div class="hero-stage">
+        <div class="hero-media"><img src="assets/img/haussmann.webp" alt="" width="2000" height="1333" fetchpriority="high"></div>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-veil" aria-hidden="true"></div>
+
+        <div class="hero-copy">
+          <h1 class="hero-title" aria-label="Réinventer l’espace. Façonner votre cocon.">
+            <span class="line" aria-hidden="true"><span class="shine">Réinventer l’espace.</span></span>
+            <span class="line" aria-hidden="true"><span class="shine">Façonner votre cocon.</span></span>
+          </h1>
+          <p class="hero-sub">Chaque intérieur est un monde. Partout en France, nous concevons des espaces de vie d’exception, entre épure architecturale et chaleur organique.</p>
+          <div class="hero-actions">
+            <a class="btn btn-light magnetic" href="#realisations">Explorer nos projets</a>
+            <a class="btn btn-outline-light magnetic" href="#contact">Échanger avec le Studio</a>
+          </div>
+        </div>
+
+        <div class="mf-layer" id="manifeste">
+          <div class="mf-inner">
+            <p class="kicker">Notre vision</p>
+            <h2 class="display" data-split>L’art de la métamorphose spatiale.</h2>
+            <p class="mf-paragraph" id="mf-paragraph">Chez Yuva, nous ne décorons pas des pièces : nous sculptons des atmosphères. En fusionnant l’ergonomie, la matière et la lumière, nous transformons chaque espace brut en un sanctuaire personnel ou professionnel intemporel.</p>
+          </div>
+        </div>
+        <p class="scroll-hint" aria-hidden="true"><i></i>Défiler</p>
+      </div>
+    </section>
+
+    <!-- LE STUDIO : trois engagements -->
+    <section class="sec studio" id="studio">
+      <article class="pl-row">
+        <div class="pl-text"><h2 class="display" data-split>Sur-mesure absolu</h2><p class="rv">Du concept initial aux finitions minutieuses.</p></div>
+        <div class="pl-frame"><img src="assets/img/methode-immersion.webp" alt="" loading="lazy"></div>
+      </article>
+      <article class="pl-row pl-rev">
+        <div class="pl-text"><h2 class="display" data-split>Matières vraies</h2><p class="rv">Équilibre des volumes, textures brutes et palettes sensorielles.</p></div>
+        <div class="pl-frame"><img src="assets/img/residence-lumina-d1.webp" alt="" loading="lazy"></div>
+      </article>
+      <article class="pl-row">
+        <div class="pl-text"><h2 class="display" data-split>Clé en main</h2><p class="rv">Du suivi de chantier à l’installation, une seule équipe de bout en bout, au service de projets résidentiels et commerciaux.</p></div>
+        <div class="pl-frame"><img src="assets/img/methode-pilotage.webp" alt="" loading="lazy"></div>
+      </article>
+    </section>
+
+    <div class="marquee sec" aria-hidden="true">
+      <div class="marquee-track"><span>Réinventer l’espace · Façonner votre cocon · </span><span>Réinventer l’espace · Façonner votre cocon · </span></div>
+    </div>
+
+    <!-- RÉALISATIONS -->
+    <section class="sec rx-wrap" id="realisations" data-theme="dark">
+      <div class="rx">
+        <div class="rx-head">
+          <h2 class="display" data-split>Métamorphoses signées</h2>
+          <p class="rx-hint rv">Cliquez sur un projet pour l’ouvrir.</p>
+        </div>
+        <div class="rx-track" id="rx-track"></div>
+        <div class="rx-progress" aria-hidden="true"><span></span></div>
+      </div>
+    </section>
+
+    <!-- L'EXPÉRIENCE YUVA -->
+    <section class="sec ap" id="approche" data-theme="dark">
+      <div class="ap-stage" aria-hidden="true">
+        <img class="is-active" src="assets/img/lavande.webp" alt="" loading="lazy">
+        <img src="assets/img/projection-3d.webp" alt="" loading="lazy">
+        <img src="assets/img/residence-lumina.webp" alt="" loading="lazy">
+        <div class="ap-veil"></div>
+      </div>
+      <div class="ap-content">
+        <div class="ap-head">
+          <h2 class="display" data-split>L’expérience Yuva</h2>
+          <p class="rv">Une méthode à distance et sur site, en trois étapes.</p>
+        </div>
+        <div class="ap-steps">
+          <div class="ap-rail" aria-hidden="true"><span></span></div>
+          <div class="ap-step" data-step="0">
+            <p class="step-label">Étape 1</p>
+            <h3 class="step-title" data-split>Immersion &amp; Vision</h3>
+            <p class="rv">Échange stratégique (visioconférence ou rencontre), analyse des volumes et définition du cahier des charges.</p>
+          </div>
+          <div class="ap-step" data-step="1">
+            <p class="step-label">Étape 2</p>
+            <h3 class="step-title" data-split>Projection 3D immersive</h3>
+            <p class="rv">Modélisation photo-réaliste 3D, choix des matériaux et harmonies colorimétriques.</p>
+          </div>
+          <div class="ap-step" data-step="2">
+            <p class="step-label">Étape 3</p>
+            <h3 class="step-title" data-split>Pilotage &amp; Livraison</h3>
+            <p class="rv">Suivi de chantier rigoureux, sélection des artisans et installation clé en main.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="sec ct" id="contact" data-theme="dark">
+      <div class="ct-bg" aria-hidden="true"></div>
+      <div class="ct-grid">
+        <div class="ct-text">
+          <h2 class="display" data-split>Votre projet commence ici</h2>
+          <p class="ct-sub rv">Que votre projet se situe à Paris, Lyon ou ailleurs en France, discutons de votre vision.</p>
+          <div class="ct-direct rv">
+            <img src="assets/logo/yuva-clair.svg" alt="Yuva" width="110" height="47">
+            <p class="ct-name">Studio Yuva</p>
+            <p>France</p>
+            <ul class="social">
+              <li><a class="btn btn-outline-light" href="#" rel="noopener" aria-label="Yuva sur Instagram">Instagram</a></li>
+              <li><a class="btn btn-outline-light" href="#" rel="noopener" aria-label="Yuva sur LinkedIn">LinkedIn</a></li>
+              <li><a class="btn btn-outline-light" href="#" rel="noopener" aria-label="Yuva sur Pinterest">Pinterest</a></li>
+            </ul>
+          </div>
+        </div>
+        <form class="glass" id="project-form" data-endpoint="" novalidate>
+          <div class="field"><label for="f-nom">Nom</label><input id="f-nom" name="nom" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="f-ville">Ville du projet</label><input id="f-ville" name="ville" type="text" autocomplete="address-level2" required></div>
+          <fieldset class="field">
+            <legend>Type d’espace</legend>
+            <div class="pills">
+              <label><input type="radio" name="type" value="Résidentiel" required><span>Résidentiel</span></label>
+              <label><input type="radio" name="type" value="Commercial"><span>Commercial</span></label>
+            </div>
+          </fieldset>
+          <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4" required></textarea></div>
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn-light magnetic" type="submit">Soumettre mon projet</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sec ft" data-theme="dark">
+    <p class="copy">© <span id="year">2026</span> Yuva</p>
+    <div class="ft-right">
+      <p>Designed with precision by Green Lab Design</p>
+      <ul>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+        <li><a href="cgv.html">CGV</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Fiche projet plein écran -->
+  <div class="pj" id="pj" role="dialog" aria-modal="true" aria-label="Fiche projet" hidden data-lenis-prevent>
+    <button class="pj-back" id="pj-back" type="button"><i></i>Retour aux réalisations</button>
+    <button class="pj-close" id="pj-close" type="button" aria-label="Fermer le projet"><span></span><span></span></button>
+    <button class="pj-nextfloat" id="pj-nextfloat" type="button"><small>Projet suivant</small><b id="pj-nextname"></b></button>
+    <div class="pj-scroll" id="pj-scroll"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
